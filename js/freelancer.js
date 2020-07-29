@@ -5,11 +5,13 @@
  */
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
+const navbarHeight = 80;
+
 $(function() {
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: $($anchor.attr('href')).offset().top - navbarHeight
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
@@ -28,7 +30,8 @@ $(function() {
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
-    target: '.navbar-fixed-top'
+    target: '.navbar-fixed-top',
+    offset: navbarHeight
 })
 
 // Closes the Responsive Menu on Menu Item Click
