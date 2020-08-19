@@ -5,11 +5,28 @@
  */
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
-const navbarHeight = 80;
+let navbarHeight = 80;
+let isMobileInitialized = false;
 
 $(function() {
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
+        if ($(window).width() < 768 && !isMobileInitialized) {
+            navbarHeight = 60;
+            initScrollSpy();
+            isMobileInitialized = true;
+        } else {
+            isMobileInitialized = false;
+        }
+        // else if ($(window).width() >= 768 &&  $(window).width() <= 992) {
+        //     // do something for medium screens
+        // }
+        // else if ($(window).width() > 992 &&  $(window).width() <= 1200) {
+        //     // do something for big screens
+        // }
+        // else  {
+        //     // do something for huge screens
+        // }
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - navbarHeight
         }, 1500, 'easeInOutExpo');
@@ -28,11 +45,14 @@ $(function() {
     });
 });
 
-// Highlight the top nav as scrolling occurs
-$('body').scrollspy({
+let initScrollSpy = function(){
+  // Highlight the top nav as scrolling occurs
+  $('body').scrollspy({
     target: '.navbar-fixed-top',
     offset: navbarHeight
-})
+  })
+}
+initScrollSpy();
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
