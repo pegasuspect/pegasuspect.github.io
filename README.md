@@ -1,4 +1,7 @@
 # How to Make Your Own Website for Free
+
+Please ask any questions from [Issues at the top](https://github.com/pegasuspect/pegasuspect.github.io/issues/new?assignees=pegasuspect&labels=question&template=question.md&title=Question%20Title). I am eager to receive feedback and see where I can improve this project.
+
 [![View an example one-pager.](img/website-screenshot.png)](https://www.osmansekerlen.com/)
 
 ## How to create your website for free
@@ -17,5 +20,4 @@
     - Put your domain into [CNAME file.](./CNAME) starting with www.
     - You might also want to contact you domain provider about the `dig` command.
     - After DNS settings are done with your domain provider, [build your website](https://jekyllrb.com/docs/step-by-step/01-setup/#build) and upload your code to github.
-    - Ask all your questions in the [Issues Tab](https://github.com/pegasuspect/pegasuspect.github.io/issues)
 
