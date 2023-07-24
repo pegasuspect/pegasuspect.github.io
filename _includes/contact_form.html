@@ -5,29 +5,13 @@
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<h2>Get in Touch</h2>
-          <hr />
-          <p>Share your opportunity directly with me. 
-			Submitting this form sends an immediate notification to my phone, ensuring a swift response. 
-			You can also send me an email at: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+					  <hr />
+					  <p>This form sends a notification to my phone! Alternatively my email address is {{ site.email }}</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
 					<form  action="//formspree.io/mlepaqrv" method="POST" name="sentMessage" id="contactForm" novalidate>
-						<div class="row control-group">
-							<div class="form-group col-xs-12 floating-label-form-group controls">
-								<label>Name</label>
-								<input type="text" name="name" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name.">
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
-						<div class="row control-group">
-							<div class="form-group col-xs-12 floating-label-form-group controls">
-								<label>Email Address</label>
-								<input type="email" name="_replyto" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address.">
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
 						<div>
 							<input type="hidden"  name="_subject" value="New submission!">
 							<input type="text" name="_gotcha" style="display:none" />
@@ -43,7 +27,7 @@
 						<div id="success"></div>
 						<div class="row">
 							<div class="form-group col-xs-12">
-								<button type="submit" class="btn btn-success btn-lg">Submit</button>
+								<button type="submit" class="btn btn-success btn-lg">Send</button>
 							</div>
 						</div>
 					</form>
